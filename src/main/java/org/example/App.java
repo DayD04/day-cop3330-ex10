@@ -25,9 +25,11 @@ public class App
 
         double subtotal = (item1 * item1Quantity) + (item2 * item2Quantity) + (item3 * item3Quantity);
         System.out.println("Subtotal: $" + subtotal);
-        double tax = subtotal * 0.05;
-        System.out.println("Tax: $" + tax);
+        double tax = subtotal * 0.055;
+        double taxRound = Math.round(tax * 100.0) /100.0;
+        System.out.println("Tax: $" + taxRound);
         double total = subtotal + tax;
-        System.out.println("Total: $" + total);
+        double totalRound = Math.round(total * 100.0) / 100.0;
+        System.out.println("Total: $" + totalRound);
     }
 }
